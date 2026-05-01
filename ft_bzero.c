@@ -1,19 +1,35 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/01 15:07:03 by mlucka            #+#    #+#             */
+/*   Updated: 2026/05/01 15:08:55 by mlucka           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include <stdio.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *p = (unsigned char *)s;
-    size_t i = 0;
-    while(i < n)
-    {
-        p[i] = 0;
-        i++;
-    }
+	unsigned char	*p;
+	size_t			i;
+
+	p = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = 0;
+		i++;
+	}
 }
-int main()
-{
-    char s[] = "hello";
-    ft_bzero(s, 3);
 
-    printf("%s", s);
-}   
+// int	main(void)
+// {
+// 	char	s[] = "hello";
+
+// 	ft_bzero(s, 3);
+// 	printf("%s", s);
+// }
