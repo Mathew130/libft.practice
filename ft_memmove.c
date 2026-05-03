@@ -1,4 +1,4 @@
-#include<stdio.h>
+// #include<stdio.h>
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -27,11 +27,11 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         return(dest);
      }
 
-int main()
-{
-   char src[] = "hello";
-   char dest[6];
+// int main()
+// {
+//    char src[] = "hello";
+//    char dest[6];
    
-    ft_memmove(dest, src, 6);
-    printf("dest = %s\n", dest);
-}
+//     ft_memmove(dest, src, 6);
+//     printf("dest = %s\n", dest);
+// }

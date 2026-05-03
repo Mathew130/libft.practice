@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 NAME	=	libft
 CC	=	cc
 CFLAGS	=	-Wall	-Werror	-Wextra
@@ -6,3 +7,6 @@ OBJ	=	$(SRC:.c=.o)
 all:	$(NAME)
 	$(NAME):	$(OBJ)
 		$(CC)	$(CFLAGS)	-o	$(NAME)	$(SRC)
+=======
+
+>>>>>>> d464aaa (some more functions dont remeber how many)
