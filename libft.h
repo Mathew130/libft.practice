@@ -4,6 +4,7 @@
 
 
 #include<stddef.h>
+#include<stdio.h>
 
 typedef struct s_list
 {
@@ -16,7 +17,9 @@ int ft_isalpha(char c);
 int ft_isdigit(int i);
 int ft_isprint(int c);
 char ft_tolower(char c);
+int ft_atoi(const char *str);
 char ft_toupper(char c);
+void *ft_memset(void *str, int c, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -27,5 +30,6 @@ size_t ft_strlcpy(char *dest, const char *src, size_t size);
 char *ft_strrchr(char *s, int c);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strchr(char *s, int c);
+size_t ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif
