@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/09 13:21:31 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/09 13:23:35 by mlucka           ###   ########.fr       */
+/*   Created: 2026/05/09 13:26:07 by mlucka            #+#    #+#             */
+/*   Updated: 2026/05/09 13:31:46 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void *calloc(size_t nitems, size_t size)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n && (s1[i] || s2[i]))
-	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		i++;
-	}
-	return (0);
+	
 }
-// int main()
-// {
-//     char *s1 = "hello";
-//     char *s2 = "hellloo";
-
-//     printf("%c\n", ft_strncmp(s1, s2, 5));
-
-// }

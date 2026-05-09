@@ -1,33 +1,45 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/09 13:20:35 by mlucka            #+#    #+#             */
+/*   Updated: 2026/05/09 13:20:37 by mlucka           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-      size_t dstl = 0;
-      size_t srcl = 0;
-      size_t        i;
-      
-       dstl = 0;
-       srcl = 0;
-          i = 0;
-          
-     while(dst[dstl])
-     dstl++;
-     while(src[srcl])
-     srcl++;
-     if(size <= dstl)
-     return(size + srcl);
-     
-     while(src[i] && (dstl + i < size - 1))
-     {
-        dst[dstl + i] = src[i];
-        i++;
-     }
-     return(dstl + srcl);
+	size_t	dstl;
+	size_t	srcl;
+	size_t	i;
+
+	dstl = 0;
+	srcl = 0;
+	dstl = 0;
+	srcl = 0;
+	i = 0;
+	while (dst[dstl])
+		dstl++;
+	while (src[srcl])
+		srcl++;
+	if (size <= dstl)
+		return (size + srcl);
+	while (src[i] && (dstl + i < size - 1))
+	{
+		dst[dstl + i] = src[i];
+		i++;
+	}
+	return (dstl + srcl);
 }
-int main()
-{
-      char dst[20] = "hello";
-      char src[]   = "world"; 
-      ft_strlcat(dst, src, sizeof(dst));
-      printf("%s\n", dst);      
-}
+// int	main(void)
+// {
+// 	char dst[20] = "hello";
+// 	char src[] = "world";
+// 	ft_strlcat(dst, src, sizeof(dst));
+// 	printf("%s\n", dst);
+// }
