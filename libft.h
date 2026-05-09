@@ -31,5 +31,6 @@ char *ft_strrchr(char *s, int c);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strchr(char *s, int c);
 size_t ft_strlcat(char *dst, const char *src, size_t size);
+char *ft_strnstr(const char *h, const char *n, size_t l);
 
 #endif
