@@ -1,50 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/09 13:22:09 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/10 09:12:07 by mlucka           ###   ########.fr       */
+/*   Created: 2026/05/10 09:23:49 by mlucka            #+#    #+#             */
+/*   Updated: 2026/05/10 14:35:22 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strdup(const char *s)
 {
-	int		i;
-	char	*l;
+	char	*new;
+	size_t	l;
 
-	i = 0;
-	l = NULL;
-	while (1)
-	{
-		if (s[i] == (char)c)
-		{
-			l = &s[i];
-		}
-		if (s[i] == '\0')
-		{
-			break ;
-		}
-		i++;
-	}
-	return (l);
+	l = ft_strlen(s);
+	new = malloc(sizeof(char) * (l + 1));
+	if (!new)
+		return (0);
+	ft_strlcpy(new, s, l + 1);
+	return (new);
 }
-// int main()
+// int	main(void)
 // {
-//       char *s = "hello world";
-//     char *l;
+// 	char *name;
+// 	char *new;
 
-//     l = ft_strrchr(s, 'o');
-//     if(l)
-//     {
-//         printf("%s\n", l);
-//     }
-//     else
-//     {
-//         printf("not found\n");
-//     }
+// 	name = "hello world";
+// 	new = ft_strdup(name);
+
+// 	printf("NEW:%s\n", new);
+// 	printf("Name:%s\n", name);
+
+// 	return (0);
 // }

@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:20:35 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/09 13:20:37 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/10 14:36:35 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	srcl;
 	size_t	i;
 
-	dstl = 0;
-	srcl = 0;
 	dstl = 0;
 	srcl = 0;
 	i = 0;
@@ -34,6 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dstl + i] = src[i];
 		i++;
 	}
+	dst[dstl + i] = '\0';
 	return (dstl + srcl);
 }
 // int	main(void)

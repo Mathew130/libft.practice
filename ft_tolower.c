@@ -6,13 +6,13 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:22:37 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/09 13:22:40 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/10 09:09:47 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

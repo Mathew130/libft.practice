@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 11:22:13 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/09 11:25:53 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/09 17:01:08 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_isalpha(char c)
 	return (0);
 }
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int i)
 {
-	if (c >= '0' && c <= '9')
+	if (i >= '0' && i <= '9')
 		return (1);
 	return (0);
 }
