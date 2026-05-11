@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:25:02 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/10 09:08:55 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/10 14:49:46 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,5 @@ void				*ft_calloc(size_t nitems, size_t size);
 int					ft_isascii(int c);
 int					ft_isalnum(char c);
 char				*ft_strchr(const char *s, int c);
+char				*ft_strdup(const char *s);
 #endif
