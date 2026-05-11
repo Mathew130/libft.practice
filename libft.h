@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:25:02 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/10 14:49:46 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/11 18:19:43 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -47,4 +48,6 @@ int					ft_isascii(int c);
 int					ft_isalnum(char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s);
+void				ft_putchr_fd(char c, int fd);
+void				ft_putendl_fd(char *s, int fd);
 #endif
