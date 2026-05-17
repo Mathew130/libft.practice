@@ -26,11 +26,4 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-// int	main(void)
-// {
-// 	char	s[] = "hello";
-
-// 	printf("%s", s);
-// 	ft_bzero(s, 3);
-// 	printf("%s", s);
-// }
+\

@@ -19,7 +19,7 @@ int	ft_isalpha(char c)
 	return (0);
 }
 
-// int main()
+ int main()
 // {
 //     char c;
 //          c = 'a';
@@ -32,6 +32,5 @@ int	ft_isalpha(char c)
 //     else
 //     {
 //         printf("%c is not an Alphabet\n", c);
-//     }
-
-// }    
+    } }    
+}
