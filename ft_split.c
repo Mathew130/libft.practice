@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 10:49:49 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/11 17:19:56 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/17 17:34:53 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ static int	length(const char *s, char c) // measurs current word length
 	}
 	return (l);
 }
-

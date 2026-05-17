@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 18:07:05 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/11 18:28:26 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/11 18:30:05 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	while (i < ft_strlen(s))
+	while (s[i])
 	{
 		write(fd, &s[i], ft_strlen(s));
 		i++;

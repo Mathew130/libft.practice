@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 11:22:06 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/09 12:53:31 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/17 17:14:27 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	ft_isalpha(char c)
 	return (0);
 }
 
- int main()
+// int main()
 // {
 //     char c;
 //          c = 'a';
 //     int j;
-//     j = ft_isalpha(c);	
+//     j = ft_isalpha(c);
 //     if(j == 1)
 //     {
 //         printf("%c is an Alphabet\n", c);
@@ -32,5 +32,3 @@ int	ft_isalpha(char c)
 //     else
 //     {
 //         printf("%c is not an Alphabet\n", c);
-    } }    
-}
