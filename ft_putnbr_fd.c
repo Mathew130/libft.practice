@@ -1,26 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/11 18:07:05 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/17 23:45:47 by mlucka           ###   ########.fr       */
+/*   Created: 2026/05/17 23:52:13 by mlucka            #+#    #+#             */
+/*   Updated: 2026/05/17 23:54:12 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], ft_strlen(s));
-		i++;
-	}
-	write(fd, "\n", 1);
-}
+void ft_putnbr_fd(int n, int fd)

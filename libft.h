@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 13:25:02 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/17 17:56:44 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/17 22:43:49 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,6 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char *s, int fd);
 char				*ft_substr(char const *s, unsigned int start, size_t l);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strtrim(const char *s1, char const *set);
+char				*ft_itoa(int n);
 #endif
