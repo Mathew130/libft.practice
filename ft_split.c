@@ -6,41 +6,91 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 10:49:49 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/17 17:34:53 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/18 13:24:28 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	counter(char const *s, char c) // count words
+static unsigned long	count_words(char const *s, char c)
 {
-	int	i;
-	int	count;
+	unsigned long	count;
+	int				i;
 
-	i = 0;
 	count = 0;
+	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c && (i == 0 || s[i - 1] == c))
+		while (s[i] == c)
+			i++;
+		if (s[i])
+		{
 			count++;
-		i++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
 	}
 	return (count);
 }
 
-static int	length(const char *s, char c) // measurs current word length
+static unsigned long	count_char(char const *s, char c, int pt)
 {
-	int	i;
-	int	l;
+	unsigned long	count;
 
-	i = 0;
-	l = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	while (s[i] && s[i] != c)
+	count = 0;
+	while (s[pt])
 	{
-		i++;
-		l++;
+		if (s[pt] == c)
+			break ;
+		pt++;
+		count++;
 	}
-	return (l);
+	return (count);
+}
+
+static void	free_split(char **split, unsigned long i)
+{
+	while (i--)
+		free(split[i]);
+	free(split);
+}
+
+static int	alloc_check(char **split, unsigned long i)
+{
+	if (!split[i])
+	{
+		free_split(split, i);
+		return (1);
+	}
+	else
+		return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char			**split;
+	unsigned long	cs;
+	unsigned long	cw;
+	unsigned long	i;
+	int				pos;
+
+	cs = count_words(s, c);
+	split = (char **)malloc((cs + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	pos = 0;
+	i = 0;
+	while (i < cs)
+	{
+		while (s[pos] == c)
+			pos++;
+		cw = count_char(s, c, pos);
+		split[i] = (char *)malloc(cw + 1);
+		if (alloc_check(split, i))
+			return (NULL);
+		ft_strlcpy(split[i++], &s[pos], cw + 1);
+		pos = pos + cw;
+	}
+	split[i] = NULL;
+	return (split);
 }

@@ -6,7 +6,7 @@
 /*   By: mlucka <mlucka@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 00:16:28 by mlucka            #+#    #+#             */
-/*   Updated: 2026/05/18 00:18:42 by mlucka           ###   ########.fr       */
+/*   Updated: 2026/05/18 11:03:28 by mlucka           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])
